@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Chairs - Auto Stop Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Mobile / PWA meta tags -->
+    <meta name="theme-color" content="#ccffcc">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🎵 Musical Chairs Game 🎵</h1>
+            <p class="subtitle">Automatic & Fair - No Human Bias!</p>
+        </header>
+        
+        <main>
+            <!-- File Upload Section -->
+            <section class="file-upload" id="fileUpload">
+                <h3>🎵 Upload Your Song</h3>
+                <div class="file-input-wrapper">
+                    <input type="file" id="audioFile" class="file-input" accept="audio/*">
+                    <label for="audioFile" class="file-label">
+                        📁 Choose Audio File
+                    </label>
+                </div>
+                <div class="song-info" id="songInfo" style="display: none;">
+                    No song selected
+                </div>
+                <div class="volume-control">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.1" value="0.7">
+                    <span class="volume-text" id="volumeText">70%</span>
+                </div>
+            </section>
+
+            <!-- Game Display Section -->
+            <section class="timer-display">
+                <div class="timer-text" id="timer">00.0</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+            </section>
+
+            <section class="status ready" id="status">
+                Ready to Play!
+            </section>
+
+            <!-- Game Controls -->
+            <section class="controls">
+                <button id="startBtn" onclick="startGame()">
+                    🎵 Start Music
+                </button>
+                <button id="resetBtn" class="reset-btn" onclick="resetGame()">
+                    🔄 Reset
+                </button>
+            </section>
+
+            <!-- Instructions -->
+            <section class="instructions">
+                <h4>How to Play:</h4>
+                <ul>
+                    <li>Upload your favorite song using the file picker above</li>
+                    <li>Click "Start Music" to begin the round</li>
+                    <li>Music will stop automatically at a random time (5-30 seconds)</li>
+                    <li>When music stops, quickly find a chair!</li>
+                    <li>Game resets automatically for the next round</li>
+                    <li>Completely fair - no human bias in timing!</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for fair musical chairs gameplay</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

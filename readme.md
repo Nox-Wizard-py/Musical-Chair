@@ -205,6 +205,6 @@ Having issues? Here are some options:
 
 ---
 
-**Made with ❤️ for fair and fun musical chairs gameplay!**
+**Made with ❤️ by Nox Wizard for fair and fun musical chairs gameplay!**
 
 Enjoy your bias-free musical chairs game! 🎉
